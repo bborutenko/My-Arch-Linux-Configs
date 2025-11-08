@@ -1,0 +1,135 @@
+@define-color foreground #f3f1d7;
+@define-color foreground-inactive #8c8c94;
+@define-color background #2b2b2b;
+@define-color border-color #f3f1d7;
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Free", "Material Design Icons";
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    color: @foreground;
+    background-color: rgba(43, 43, 43, 0.9); /* Полупрозрачный как в Hyprland */
+    border: 2px solid @border-color; /* Толщина как в hyprland.conf */
+    border-radius: 8px; /* Скругление как в decorations */
+}
+
+/* Рабочие столы */
+#workspaces button {
+    color: @foreground-inactive;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 0 8px;
+    margin: 2px 1px;
+}
+
+#workspaces button.active {
+    color: @foreground;
+    background: rgba(243, 241, 215, 0.1);
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+    opacity: 0.6;
+}
+
+#workspaces button:hover {
+    background: rgba(243, 241, 215, 0.15);
+}
+
+/* Модули с левым отступом */
+#window,
+#clock {
+    padding-left: 12px;
+}
+
+/* Модули с правым отступом */
+#memory,
+#temperature,
+#wireplumber,
+#battery,
+#backlight,
+#language,
+#network,
+#bluetooth,
+#tray {
+    padding-right: 12px;
+    padding-left: 8px;
+}
+
+/* Капс лок */
+#capslock {
+    background-color: @foreground;
+    color: @background;
+    border-radius: 4px;
+    padding: 0 8px;
+    margin: 2px 4px;
+}
+
+/* Батарея */
+#battery {
+    color: @foreground;
+}
+
+#battery.warning {
+    color: #ffa500;
+}
+
+#battery.critical {
+    color: #ff0000;
+}
+
+/* Звук */
+#wireplumber {
+    color: @foreground;
+}
+
+#wireplumber.muted {
+    color: @foreground-inactive;
+}
+
+/* Сеть */
+#network {
+    color: @foreground;
+}
+
+#network.disconnected {
+    color: @foreground-inactive;
+}
+
+/* Память и температура */
+#memory,
+#temperature {
+    color: @foreground;
+}
+
+#memory.warning,
+#temperature.warning {
+    color: #ffa500;
+}
+
+#memory.critical,
+#temperature.critical {
+    color: #ff0000;
+}
+
+/* Язык */
+#language {
+    color: @foreground;
+    min-width: 16px;
+}
+
+/* Трей */
+#tray {
+    color: @foreground;
+}
+
+/* Backlight */
+#backlight {
+    color: @foreground;
+}

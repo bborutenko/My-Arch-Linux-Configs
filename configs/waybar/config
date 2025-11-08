@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "margin-top": 6,
+    "margin-bottom": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    
+    "modules-left": ["hyprland/workspaces", "custom/current-window"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "memory",
+        "wireplumber",
+        "backlight",
+        "battery",
+        "language",
+        "network",
+        "tray"
+    ],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰇄",
+            "2": "󰆠", 
+            "3": "󰊖",
+            "4": "󰉋",
+            "5": "󰓓",
+            "6": "󰊴",
+            "7": "󰝚",
+            "8": "󰙴",
+            "9": "󰗮",
+            "10": "󰗹"
+        }
+    },
+
+   "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    
+    "memory": {
+        "format": "󰍛 {percentage}%",
+        "interval": 5
+    },
+    
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": ["󰖁", "󰖀", "󰕾"]
+    },
+    
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%", 
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+    
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁹"],
+        "format-charging": "󰂄 {capacity}%"
+    },
+    
+    "language": {
+        "format": "󰌌 {}",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    },
+    
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 Connected",
+        "format-disconnected": "󰖪",
+        "interval": 5
+    },
+    
+    "tray": {
+        "spacing": 8
+    }
+}

@@ -1,4 +1,4 @@
-# My Arch Linux Rising
+# My Arch Linux Ricing
 
 ## Important
 - Desktop-only setup: the configuration launches many background services, relies on Hyprland plugins and visual effects, and puts a noticeable load on RAM.
